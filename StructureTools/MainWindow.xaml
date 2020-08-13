@@ -1,0 +1,43 @@
+﻿<Window x:Name="win_MainWindow" x:Class="StructureTools.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Structure Tools" Height="350" Width="350" WindowStartupLocation="CenterScreen" Closing="win_MainWindow_Closing">
+    <Grid x:Name="grid_MainGrid" Background="#FFE0E0E0">
+        <Menu x:Name="menu_MainMenu" VerticalAlignment="Top" Height="31">
+            <MenuItem x:Name="mi_Main_File" Header="File">
+                <MenuItem x:Name="mi_Sub_File_New" Header="New project" Click="MenuItem_New_Click">
+                </MenuItem>
+                <MenuItem x:Name="mi_Sub_File_Save" Header="Save project" Visibility="Collapsed" Click="MenuItem_Save_Click">
+                </MenuItem>
+                <MenuItem x:Name="mi_Sub_File_Load" Header="Load project" Click="MenuItem_Load_Click">
+                </MenuItem>
+                <MenuItem x:Name="mi_Sub_File_Exit" Header="Exit" Click="MenuItem_Exit_Click">
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="mi_Main_Sim" Header="Simulation" Visibility="Collapsed">
+                <MenuItem x:Name="mi_Sub_Sim_Grains" Header="Grains" Click="MenuItem_Grains_Click">
+                </MenuItem>
+                <MenuItem x:Name="mi_Sub_Sim_Settings" Header="Settings" Click="MenuItem_Settings_Click">
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="mi_Main_Meshers" Header="Meshers" Click="MenuItem_Meshers_Click">
+            </MenuItem>
+            <MenuItem x:Name="mi_Main_Materials" Header="Materials" Click="MenuItem_Materials_Click">
+            </MenuItem>
+            <MenuItem x:Name="mi_Main_Other" Header="Other" Click="MenuItem_Other_Click">
+            </MenuItem>
+        </Menu>
+        <ScrollViewer x:Name="scr_ScrollContainer" Margin="0,36,0,0" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible">
+            <Image x:Name="img_MainDisplay" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" MouseDown="img_MainDisplay_MouseDown"/>
+        </ScrollViewer>
+        <Menu x:Name="menu_SubMenu" VerticalAlignment="Top" Margin="0,18,0,0" Height="18">
+            <MenuItem x:Name="MenuItem_Sub_Run" Header="Run" Click="MenuItem_Run_Click"  IsEnabled="false">
+            </MenuItem>
+            <MenuItem x:Name="MenuItem_Sub_Restart" Header="Restart" Click="MenuItem_Restart_Click"  IsEnabled="false">
+            </MenuItem>
+            <MenuItem x:Name="MenuItem_Sub_RunMC" Header="Enable MC, finished steps: 0" Click="MenuItem_RunMC_Click" IsEnabled="false">
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Window x:Name="win_SimulationWindow" x:Class="StructureTools.SimWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="New project" Height="450" Width="400" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
+    <Grid>
+        <Grid Background="#FFE5E5E5" Margin="10">
+            <Label x:Name="lab_ProjName" Content="Project name:" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="tbox_ProjName" HorizontalAlignment="Left" Height="23" Margin="97,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lab_AreaWidth" Content="Area width:" HorizontalAlignment="Left" Margin="22,38,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="tbox_AreaWidth" HorizontalAlignment="Left" Height="23" Margin="97,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lab_AreaHeight" Content="Area height:" HorizontalAlignment="Left" Margin="18,67,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="tbox_AreaHeight" HorizontalAlignment="Left" Height="23" Margin="97,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lab_MCSteps" Content="MC Steps:" HorizontalAlignment="Left" Margin="29,118,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="tbox_MCSteps" HorizontalAlignment="Left" Height="23" Margin="97,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+            <GroupBox x:Name="gbox_projectType" Header="Simulation type" HorizontalAlignment="Left" Margin="10,171,0,0" VerticalAlignment="Top" Height="183" Width="233">
+                <Grid HorizontalAlignment="Left" Margin="0,0,-2,-12" Width="284">
+                    <RadioButton x:Name="rad_1" Content="Voronoi" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" IsChecked="True" />
+                    <RadioButton x:Name="rad_2" Content="CA Moore" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rad_3" Content="CA Von Neumann" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rad_4" Content="CA Pentagonal Random" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.467,-0.111"/>
+                    <RadioButton x:Name="rad_5" Content="CA Hexagonal Left" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rad_6" Content="CA Hexagonal Right" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rad_7" Content="CA Hexagonal Random" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rad_8" Content="Imported" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+                </Grid>
+            </GroupBox>
+            <Button x:Name="btn_SimCancel" Content="Cancel" HorizontalAlignment="Left" Margin="299,371,0,0" VerticalAlignment="Top" Width="75" Click="btn_SimCancel_Click"/>
+            <Button x:Name="btn_SimOK" Content="OK" HorizontalAlignment="Left" Margin="219,371,0,0" VerticalAlignment="Top" Width="75" Click="btn_SimOK_Click"/>
+            <Button x:Name="btn_ImportExistingImage" Content="Import from file" HorizontalAlignment="Left" Margin="248,10,0,0" VerticalAlignment="Top" Click="btn_ImportExistingImage_Click" Width="118"/>
+            <Image x:Name="img_PreviewDisplay" HorizontalAlignment="Left" Height="100" Margin="264,85,0,0" VerticalAlignment="Top" Width="100"/>
+            <Button x:Name="btn_ClearImport" Content="Clear import" HorizontalAlignment="Left" Margin="248,60,0,0" VerticalAlignment="Top" Click="btn_ClearImport_Click" Width="118"/>
+            <Button x:Name="btn_ImportFromProgram" Content="Import from program" HorizontalAlignment="Left" Margin="248,35,0,0" VerticalAlignment="Top" Click="btn_ImportFromProgram_Click"/>
+            <CheckBox x:Name="cbox_Periodic" Content="Periodic" HorizontalAlignment="Left" Margin="22,149,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="cbox_EnableMC" Content="Enable MC" HorizontalAlignment="Left" Margin="22,98,0,0" VerticalAlignment="Top" Checked="cbox_EnableMC_Checked" Unchecked="cbox_EnableMC_Unchecked"/>
+
+        </Grid>
+    </Grid>
+</Window>

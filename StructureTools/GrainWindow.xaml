@@ -1,0 +1,33 @@
+﻿<Window x:Name="win_GrainWindow" x:Class="StructureTools.GrainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="Grains" Height="342" Width="735.667" ResizeMode="NoResize">
+    <Grid>
+        <Grid Background="#FFE5E5E5" Margin="10">
+            <Button x:Name="btn_GrainDelete" Content="Delete" HorizontalAlignment="Left" Margin="120,255,0,0" VerticalAlignment="Top" Width="50" IsEnabled="False" Click="btn_GrainDelete_Click"/>
+            <ListBox x:Name="lbox_GrainsList" HorizontalAlignment="Left" Height="240" Margin="449,10,0,0" VerticalAlignment="Top" Width="251" MouseDoubleClick="lbox_GrainsList_MouseDoubleClick"/>
+            <Button x:Name="btn_GrainEdit" Content="Edit" HorizontalAlignment="Left" Margin="65,255,0,0" VerticalAlignment="Top" Width="50" Click="btn_GrainEdit_Click" IsEnabled="False"/>
+            <Button x:Name="btn_GrainAdd" Content="Add" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.48,-0.067" Click="btn_GrainAdd_Click"/>
+            <xctk:ColorCanvas x:Name="colc_Picker" Margin="204,10,0,0" Width="240" Height="240" HorizontalAlignment="Left" VerticalAlignment="Top"></xctk:ColorCanvas>
+            <Button x:Name="btn_Clear" Content="Clear list" HorizontalAlignment="Left" Margin="175,255,0,0" VerticalAlignment="Top" Width="50" Click="btn_Clear_Click"/>
+            <Button x:Name="btn_Done" Content="Done" HorizontalAlignment="Left" Margin="630,255,0,0" VerticalAlignment="Top" Width="70" Click="btn_Done_Click"/>
+            <GroupBox x:Name="gbox_InputMethod" Header="Input method" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="235" Width="189">
+                <Grid HorizontalAlignment="Left" Height="222" VerticalAlignment="Top" Width="179" Margin="0,0,-2,-12">
+                    <RadioButton x:Name="rad_Input_Manual" Content="Manual" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                    <Label x:Name="lab_GrainX" Content="Grain X position:" HorizontalAlignment="Left" Margin="15,30,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
+                    <TextBox x:Name="tbox_GrainX" HorizontalAlignment="Left" Margin="115,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="25"/>
+                    <Label x:Name="lab_GrainY" Content="Grain Y position:" HorizontalAlignment="Left" Margin="15,60,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
+                    <TextBox x:Name="tbox_GrainY" HorizontalAlignment="Left" Margin="115,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="25"/>
+                    <RadioButton x:Name="rad_Input_Random" Content="Random" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" />
+                    <Label x:Name="lab_RandGrains" Content="No. of grains:" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" Width="100" Height="27" RenderTransformOrigin="0.48,1.741"/>
+                    <TextBox x:Name="tbox_RandGrain" HorizontalAlignment="Left" Margin="115,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="25"/>
+                    <RadioButton x:Name="rad_Input_Click" Content="Click" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" Checked="rad_Input_Click_Checked" Unchecked="rad_Input_Click_Unchecked"/>
+                    <Button x:Name="btn_RandomColor" Content="Random color" HorizontalAlignment="Left" Margin="65,90,0,0" VerticalAlignment="Top" Width="100" Click="btn_RandomColor_Click"/>
+                </Grid>
+            </GroupBox>
+            <Label x:Name="lab_GrainCount" Content="0" HorizontalAlignment="Left" Margin="449,255,0,0" VerticalAlignment="Top"/>
+        </Grid>
+
+    </Grid>
+</Window>

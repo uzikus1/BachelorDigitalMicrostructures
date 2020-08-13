@@ -1,0 +1,11 @@
+﻿<Window x:Class="StructureTools.ProgramWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ProgramWindow" Height="300" Width="294">
+    <Grid>
+        <ListBox x:Name="lbox_ProgramList" Margin="10,31,10,0" Height="191" VerticalAlignment="Top" MouseDoubleClick="lbox_ProgramList_MouseDoubleClick"/>
+        <Label x:Name="lab_Detected" Content="Detected programs:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lab_Tip" Content="Double-click to open application" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="187"/>
+
+    </Grid>
+</Window>
